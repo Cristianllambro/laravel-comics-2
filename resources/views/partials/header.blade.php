@@ -1,6 +1,6 @@
 <header>
     <div class="nav">
-        <img src="img/dc-logo.png" alt="">
+        <img src="{{asset('img/dc-logo.png')}}" alt="">
         <ul>
             <li><a href="#">characters</a></li>
             <li><a href="#">comics</a></li>

@@ -3,9 +3,7 @@
 @section('main')
 
 <main>
-
-
-
+    
     {{-- section card comics --}}
     <div class="container">
 

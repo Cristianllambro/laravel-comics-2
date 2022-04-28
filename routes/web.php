@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     $card = config('comics');
     $data = [
         'card' => $card,
@@ -43,3 +43,13 @@ Route::get('/', function () {
     return view('home', $data);
 })-> name('home');
 
+Route::get('/home/{id}', function ($id) {
+    $info = collect(config('comics'));
+    $selectCard = $info-> firstwhere('id', $id);
+    if(!$selectCard) abort(404);
+    
+    return view('main_card', [
+        'title' => $selectCard['series'] . ' - DC',
+        'item' => $selectCard,
+    ]);
+})-> name('album');
