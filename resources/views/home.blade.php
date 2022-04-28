@@ -3,14 +3,16 @@
 @section('main')
 
 <main>
-    <div class="tumb">
-        <div class="square-blue">
-            current series
-        </div>
-    </div>
+
+
 
     {{-- section card comics --}}
     <div class="container">
+
+        <div class="square-blue">
+            current series
+        </div>
+
         <div class="center">
             @foreach ($card as $item)
                 <div class="card">
